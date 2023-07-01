@@ -91,7 +91,7 @@ export default function OutOfOfficeGenerator() {
                     <button
                       className="bg-orange-600 rounded-md text-white font-medium px-4 py-2.5 sm:mt-2 mt-2 hover:bg-black/80 w-full"
                       onClick={(e) => generateResponse(e)}>
-                      Generate out of
+                      Generate out of office
                     </button>
                   </div>
                 </form>
