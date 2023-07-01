@@ -1,6 +1,6 @@
-# Welcome to Job-Description-Generator Community
+# Welcome to AI-JobSweet Community
 
-JobSweet is a collection of AI generators to aid in the workplace.We welcome contributions and aim to optimise the prompts to produce the best responses while providing an easy-to-use format.
+JobSweet is a collection of AI generators to aid in the workplace. We welcome contributions and aim to optimise the prompts to produce the best responses while providing an easy-to-use format.
 
 - Built-in NextJS + Tailwind
 - Using OpenAI
