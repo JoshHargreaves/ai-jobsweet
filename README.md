@@ -1,3 +1,11 @@
+# Welcome to Job-Description-Generator Community
+
+JobSweet is a collection of AI generators to aid in the workplace.We welcome contributions and aim to optimise the prompts to produce the best responses while providing an easy-to-use format.
+
+- Built-in NextJS + Tailwind
+- Using OpenAI
+- Open to contributors
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
