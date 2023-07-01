@@ -16,7 +16,8 @@ export default function Home() {
                   <h1 className="sm:text-4xl text-4xl font-bold text-slate-900">
                     JobSweet AI Generator library for the workplace
                   </h1>
-                  <p className="sm:text-lg text-lg text-slate-600">
+                  <p className="sm:text-lg text-lg mt-6 text-slate-600">
+                  JobSweet is committed to making AI accessible to everyone. We believe that AI should not be limited to experts or those with technical backgrounds. By providing user-friendly AI generators, we strive to empower individuals from diverse industries and skill sets to harness the benefits of AI in their daily work.
                   </p>
                 </div>
               </div>

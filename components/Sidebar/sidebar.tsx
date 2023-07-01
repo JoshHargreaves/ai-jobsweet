@@ -10,6 +10,7 @@ export default function Sidebar() {
                 <li className="pb-4"><Link className="hover:bg-slate-200 text-xl-4 active:text-indigo-600 hover:text-orange-300" href={"JobDescription"}>Job Description</Link></li>
                 <li className="pb-4"><Link className="hover:bg-slate-200 text-xl-4 active:text-indigo-600 hover:text-orange-300" href={"PDP"}>PDP (Coming soon)</Link></li>
                 <li className="pb-4"><Link className="hover:bg-slate-200 text-xl-4 active:text-indigo-600 hover:text-orange-300" href={"OutOfOffice"}>Out of Office</Link></li>
+                <li className="pb-4"><Link className="hover:bg-slate-200 text-xl-4 active:text-indigo-600 hover:text-orange-300" href={"ResignationNotice"}>Resignation Notice</Link></li>
             </ul>
         </aside>
     );
