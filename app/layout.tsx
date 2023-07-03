@@ -1,16 +1,16 @@
-'use client';
-import Header from '@/components/Header/header'
-import './globals.css'
-import { Inter } from 'next/font/google'
-import Sidebar from '@/components/Sidebar/sidebar'
-import { useState } from 'react';
+"use client";
+import Header from "@/components/Header/header";
+import "./globals.css";
+import { Inter } from "next/font/google";
+import Sidebar from "@/components/Sidebar/sidebar";
+import { useState } from "react";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   const [show, setShow] = useState(false);
   const [profile, setProfile] = useState(false);
@@ -25,12 +25,12 @@ export default function RootLayout({
           <div className="flex flex-no-wrap">
             <Sidebar show={show} setShow={setShow}></Sidebar>
             <div className="w-full">
-            <Header show={show} setShow={setShow}></Header>
+              <Header show={show} setShow={setShow}></Header>
               <div className="container mx-auto py-10  w-full px-6">
                 <div className="w-full h-full border-gray-300">
-                <main className="grid min-h-screen text-slate-900 justify-center gap-4 overflow-hidden">
-                {children}
-                </main>
+                  <main className="grid min-h-screen text-slate-900 justify-center gap-4 overflow-hidden">
+                    {children}
+                  </main>
                 </div>
               </div>
             </div>
@@ -38,5 +38,5 @@ export default function RootLayout({
         </div>
       </body>
     </html>
-  )
+  );
 }

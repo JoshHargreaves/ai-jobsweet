@@ -7,11 +7,11 @@ export default function ResignationNoticeGenerator() {
   const [tone, setTone] = useState<ToneType>("Story");
   const [post, setPost] = useState<string>("");
 
-  const [jobTitle, setJobTitle] = useState('');
-  const [employeeName, setEmployeeName] = useState('');
-  const [startDate, setStartDate] = useState('');
-  const [noticePeriodWeeks, setNoticePeriodWeeks] = useState('');
-  const [companyName, setCompanyName] = useState('');
+  const [jobTitle, setJobTitle] = useState("");
+  const [employeeName, setEmployeeName] = useState("");
+  const [startDate, setStartDate] = useState("");
+  const [noticePeriodWeeks, setNoticePeriodWeeks] = useState("");
+  const [companyName, setCompanyName] = useState("");
 
   // add more vibes as needed
   const handlePrompt = () => {
@@ -42,9 +42,7 @@ export default function ResignationNoticeGenerator() {
       body: JSON.stringify({
         prompt,
       }),
-
     });
-
 
     if (!response.ok) {
       throw new Error(response.statusText);
@@ -69,68 +67,112 @@ export default function ResignationNoticeGenerator() {
     }
   };
 
-
-    return(
-
-        <div className="px-4">
-        <div className='max-w-5xl mx-auto'>
-          <h1 className="sm:text-6xl text-4xl font-bold text-slate-900">
+  return (
+    <div className="px-4">
+      <div className="max-w-5xl mx-auto">
+        <h1 className="sm:text-6xl text-4xl font-bold text-slate-900">
           Generate Your Resignation Notice
-          </h1>
-          <p className="sm:text-lg text-lg text-slate-600">
-            AI generated Resignation Notice
-          </p>
-          <div className="flex flex-col md:flex-row w-full md:p-12">
-            <div className='flex md:flex-col sm:flex-row s:w-full md:w-2/4'>
-              <div className="inline-block relative">
-                <form>
-                  <div className="md:px-5 pb-5">
-                  <input placeholder="Job Title" required name="jobTitle" onChange={e => { setJobTitle(e.currentTarget.value); }} className="text-gray-900 w-full px-4 py-2.5 mt-2 bg-white border border-gray-300 rounded-md shadow-inner"></input>
-                  <input placeholder="Employee name" required name="employeeName" onChange={e => { setEmployeeName(e.currentTarget.value); }} className="text-gray-900 w-full px-4 py-2.5 mt-2 bg-white border border-gray-300 rounded-md shadow-inner"></input>
-                  <input placeholder="Company Name" required onChange={e => { setCompanyName(e.currentTarget.value); }} className="text-black w-full px-4 py-2.5 mt-2 bg-white border border-gray-300 rounded-md shadow-inner"></input>
-                  <input placeholder="Start Date" type="date" required name="startDate" onChange={e => { setStartDate(e.currentTarget.value); }} className="text-gray-900 w-full px-4 py-2.5 mt-2 bg-white border border-gray-300 rounded-md shadow-inner"></input>
-                  <input placeholder="Notice period in weeks" type="number" required name="secondaryContact" onChange={e => { setNoticePeriodWeeks(e.currentTarget.value); }} className="text-gray-900 w-full px-4 py-2.5 mt-2 bg-white border border-gray-300 rounded-md shadow-inner"></input>
-                    <button
-                      className="bg-orange-600 rounded-md text-white font-medium px-4 py-2.5 sm:mt-2 mt-2 hover:bg-black/80 w-full"
-                      onClick={(e) => generateResponse(e)}>
-                      Generate Resignation Notice
-                    </button>
-                  </div>
-                </form>
-              </div>
+        </h1>
+        <p className="sm:text-lg text-lg text-slate-600">
+          AI generated Resignation Notice
+        </p>
+        <div className="flex flex-col md:flex-row w-full md:p-12">
+          <div className="flex md:flex-col sm:flex-row s:w-full md:w-2/4">
+            <div className="inline-block relative">
+              <form>
+                <div className="md:px-5 pb-5">
+                  <input
+                    placeholder="Job Title"
+                    required
+                    name="jobTitle"
+                    onChange={(e) => {
+                      setJobTitle(e.currentTarget.value);
+                    }}
+                    className="text-gray-900 w-full px-4 py-2.5 mt-2 bg-white border border-gray-300 rounded-md shadow-inner"
+                  ></input>
+                  <input
+                    placeholder="Employee name"
+                    required
+                    name="employeeName"
+                    onChange={(e) => {
+                      setEmployeeName(e.currentTarget.value);
+                    }}
+                    className="text-gray-900 w-full px-4 py-2.5 mt-2 bg-white border border-gray-300 rounded-md shadow-inner"
+                  ></input>
+                  <input
+                    placeholder="Company Name"
+                    required
+                    onChange={(e) => {
+                      setCompanyName(e.currentTarget.value);
+                    }}
+                    className="text-black w-full px-4 py-2.5 mt-2 bg-white border border-gray-300 rounded-md shadow-inner"
+                  ></input>
+                  <input
+                    placeholder="Start Date"
+                    type="date"
+                    required
+                    name="startDate"
+                    onChange={(e) => {
+                      setStartDate(e.currentTarget.value);
+                    }}
+                    className="text-gray-900 w-full px-4 py-2.5 mt-2 bg-white border border-gray-300 rounded-md shadow-inner"
+                  ></input>
+                  <input
+                    placeholder="Notice period in weeks"
+                    type="number"
+                    required
+                    name="secondaryContact"
+                    onChange={(e) => {
+                      setNoticePeriodWeeks(e.currentTarget.value);
+                    }}
+                    className="text-gray-900 w-full px-4 py-2.5 mt-2 bg-white border border-gray-300 rounded-md shadow-inner"
+                  ></input>
+                  <button
+                    className="bg-orange-600 rounded-md text-white font-medium px-4 py-2.5 sm:mt-2 mt-2 hover:bg-black/80 w-full"
+                    onClick={(e) => generateResponse(e)}
+                  >
+                    Generate Resignation Notice
+                  </button>
+                </div>
+              </form>
             </div>
-            <div className='flex md:flex-col sm:flex-row s:w-full md:w-2/4'>
-              <div className="inline-block relative text-slate-900 w-full">
-                <Toaster
-                  position="top-right"
-                  reverseOrder={false}
-                  toastOptions={{ duration: 2000 }}
-                />
-                {generatedDescription && (
-
-                  <div className="max-w-5xl my-4 mx-auto">
-                    <div
-                      className="bg-white rounded-xl shadow-md p-4 hover:bg-gray-100 transition cursor-copy border"
-                      onClick={() => {
-                        navigator.clipboard.write([
-                          new ClipboardItem({
-                            "text/html": new Blob([generatedDescription], { type: "text/html" }),
+          </div>
+          <div className="flex md:flex-col sm:flex-row s:w-full md:w-2/4">
+            <div className="inline-block relative text-slate-900 w-full">
+              <Toaster
+                position="top-right"
+                reverseOrder={false}
+                toastOptions={{ duration: 2000 }}
+              />
+              {generatedDescription && (
+                <div className="max-w-5xl my-4 mx-auto">
+                  <div
+                    className="bg-white rounded-xl shadow-md p-4 hover:bg-gray-100 transition cursor-copy border"
+                    onClick={() => {
+                      navigator.clipboard.write([
+                        new ClipboardItem({
+                          "text/html": new Blob([generatedDescription], {
+                            type: "text/html",
                           }),
-                        ]);
-                        toast("Post copied to clipboard", {
-                          icon: "📋",
-                        });
-                      }}
-                      key={generatedDescription}
-                    >
-                      <p className="text-slate-900" dangerouslySetInnerHTML={{ __html: generatedDescription }} />
-                    </div>
+                        }),
+                      ]);
+                      toast("Post copied to clipboard", {
+                        icon: "📋",
+                      });
+                    }}
+                    key={generatedDescription}
+                  >
+                    <p
+                      className="text-slate-900"
+                      dangerouslySetInnerHTML={{ __html: generatedDescription }}
+                    />
                   </div>
-                )}
-              </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
       </div>
-    )
+    </div>
+  );
 }
