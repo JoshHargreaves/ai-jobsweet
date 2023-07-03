@@ -4,6 +4,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import Sidebar from "@/components/Sidebar/sidebar";
 import { useState } from "react";
+import Footer from "@/components/Footer/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,6 +32,7 @@ export default function RootLayout({
                   <main className="grid min-h-screen text-slate-900 justify-center gap-4 overflow-hidden">
                     {children}
                   </main>
+                  <Footer></Footer>
                 </div>
               </div>
             </div>
