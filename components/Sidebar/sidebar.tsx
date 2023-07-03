@@ -6,7 +6,7 @@ export default function Sidebar(props: { show: any; setShow: any; }) {
     return (
         <>
             {/* Sidebar starts */}
-            <div className="absolute lg:relative w-64 h-screen shadow bg-gray-100 hidden lg:block">
+            <div className="absolute lg:relative w-64 shadow bg-gray-100 hidden lg:block">
                 <div className="h-16 w-full text-4xl font-bold text-orange-600 text-4xl flex items-center px-8">
                 <span><Link className="" href={"/"}>JobSweet</Link></span>
                 </div>

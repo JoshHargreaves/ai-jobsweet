@@ -1,5 +1,5 @@
 'use client';
-import JobDescriptionGenerator from '@/components/JobDescriptionGenerator/jobdescriptiongenerator';
+import JobDescriptionGenerator from '@/components/JobDescriptionGenerator/jobDescriptionGenerator';
 import Sidebar from '@/components/Sidebar/sidebar'
 import Image from 'next/image'
 import { useState } from 'react';

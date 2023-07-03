@@ -1,5 +1,5 @@
 'use client';
-import JobDescriptionGenerator from '@/components/JobDescriptionGenerator/jobdescriptiongenerator';
+import JobDescriptionGenerator from '@/components/JobDescriptionGenerator/jobDescriptionGenerator';
 import Image from 'next/image'
 
 export default function Home() {
