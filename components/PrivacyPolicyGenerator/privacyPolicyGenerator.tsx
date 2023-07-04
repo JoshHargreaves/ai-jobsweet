@@ -68,14 +68,6 @@ export default function PrivacyPolicyGenerator() {
   };
 
   return (
-    <div className="px-4">
-      <div className="max-w-5xl mx-auto">
-        <h1 className="sm:text-6xl text-4xl font-bold text-slate-900">
-          Generate A Privacy Policy
-        </h1>
-        <p className="sm:text-lg text-lg text-slate-600">
-          AI Generated Privacy Policy
-        </p>
         <div className="flex flex-col md:flex-row w-full md:p-12">
           <div className="flex md:flex-col sm:flex-row s:w-full md:w-2/4">
             <div className="inline-block relative">
@@ -155,7 +147,5 @@ export default function PrivacyPolicyGenerator() {
             </div>
           </div>
         </div>
-      </div>
-    </div>
   );
 }

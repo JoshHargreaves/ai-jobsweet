@@ -27,7 +27,7 @@ export default function RootLayout({
             <Sidebar show={show} setShow={setShow}></Sidebar>
             <div className="w-full">
               <Header show={show} setShow={setShow}></Header>
-              <div className="container mx-auto py-10  w-full px-6">
+              <div className="container mx-auto py-4  w-full px-4">
                 <div className="w-full h-full border-gray-300">
                   <main className="grid min-h-screen text-slate-900 justify-center gap-4 overflow-hidden">
                     {children}

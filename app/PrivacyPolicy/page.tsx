@@ -5,7 +5,7 @@ import Sidebar from "@/components/Sidebar/sidebar";
 
 export default function Home() {
   return (
-    <GeneratorContainer
+    <GeneratorContainer title="Generate A Privacy Policy" subtitle="AI Generated Privacy Policy"
       generator={<PrivacyPolicyGenerator />}
     ></GeneratorContainer>
   );

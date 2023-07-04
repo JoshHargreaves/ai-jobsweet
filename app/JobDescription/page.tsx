@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <GeneratorContainer
+    <GeneratorContainer title="Generate A Job Description." subtitle="Reach Talent Faster."
       generator={<JobDescriptionGenerator />}
     ></GeneratorContainer>
   );

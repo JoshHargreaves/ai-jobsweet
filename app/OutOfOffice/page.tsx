@@ -5,7 +5,7 @@ import Sidebar from "@/components/Sidebar/sidebar";
 
 export default function Home() {
   return (
-    <GeneratorContainer
+    <GeneratorContainer title="Generate your out of office response" subtitle="AI generated out of office"
       generator={<OutOfOfficeGenerator />}
     ></GeneratorContainer>
   );

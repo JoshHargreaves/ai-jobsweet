@@ -5,7 +5,7 @@ import Sidebar from "@/components/Sidebar/sidebar";
 
 export default function Home() {
   return (
-    <GeneratorContainer
+    <GeneratorContainer title="Generate Your Resignation Notice" subtitle="AI generated Resignation Notice"
       generator={<ResignationNoticeGenerator />}
     ></GeneratorContainer>
   );
