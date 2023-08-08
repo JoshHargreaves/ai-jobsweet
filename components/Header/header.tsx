@@ -48,6 +48,11 @@ export default function Header(props: { show: any; setShow: any }) {
           </svg>
         )}
       </div>
+      <div className="m-2">
+        <a target="_blank" href="https://github.com/JoshHargreaves/ai-jobsweet.git">
+          <FaGithub size={45} className="text-gray-600 hover:text-gray-800 cursor-pointer" />
+        </a>
+      </div>
     </nav>
   );
 }
